@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    안녕 > &gt; &#62;
+    <script>
+        //문자열 String - 쌍, 홑 따옴표를 이용하면 문자열로 저장
+        let name = "John Doe";
+        let name2 = 'John Doe';
+
+        let dobleQuote = 'He is called "Johnny"'; //문자열 안에 쌍따옴표를 사용할 시 겉엔 무조건 홑따옴표
+        console.log(dobleQuote);
+
+        let singleQuote = "He is called 'Johnny'"; //문자열 안에 홑따옴표를 사용할 시 겉엔 무조건 쌍따옴표
+        console.log(singleQuote);
+
+        let dobleQuote2 = "He is \\ \> called \"Johnny\""; //특수문자 사용할 시 역슬래시 앞에 붙이기
+        console.log(dobleQuote2);
+
+        let back = `He is called 'Johnny' "Johnny"`;
+        console.log(back);
+
+        /*===================================================*/
+
+        //숫자 Number - 쌍, 홑 따옴표를 붙이면 문자로 인식
+        let x = 3;
+        let y = 3.14;
+
+        /*===================================================*/
+
+        //undefined - 값이 할당되지 않은 하나의 데이터 타입
+        let u;
+        let u2 = undefined;
+        console.log('u', u, 'u2', u2);
+
+        /*===================================================*/
+
+        //Null - 아직 할당 준비가 안됐을 때
+        let n = null;
+        console.log('n', n);
+
+        /*===================================================*/
+
+        //Object - 선언 방법은 2가지 존재, key-value 한쌍으로 구성, 하나의 카테고리로 묶이는 것을 관리하기 편하게 사용할 때 오브젝트 사용
+        let person = {};
+        //선언방법 1-1
+        person.firstName = "John";
+        person.lastName = 'Doe';
+        person.age = 40;
+        //선언방법 1-2
+        person["firstName"] = "Sam";
+        person["lastName"] = "Kim";
+        person["age"] = 23;
+
+        console.log(person);
+        console.log(person.lastName);
+        console.log(person["firstName"]);
+
+        //선언방법 2
+        let person2 = {
+            firstName : "Heejun",
+            lastName : "Sung",
+            age : 31
+        }
+        person2.email = "y@gmail.com";
+        console.log(person2["email"]);
+
+        /*===================================================*/
+
+        //Array - 배열
+        let arr1 = ["Hyundai", "KIA", "Volvo"];
+        console.log(arr1);
+        console.log(arr1[0]);
+
+        let arr2 = ["Hyundai", 2, undefined];
+        let arr3 = [person, person2];
+        console.log(arr3);
+
+        let arr4 = [];
+        arr4[0] = 0;
+        arr4[2] = 2;
+        arr4.push(3);
+        console.log(arr4);
+
+        /*===================================================*/
+
+        //Boolean - 참/거짓 true or false 두 값만 존재
+        let isAdult = true;
+        console.log(isAdult);
+
+        let x2 = 3;
+        let y2 = 7;
+        console.log(x2 > y2);
+
+        /*===================================================*/
+        
+        //데이터 타입 확인 - array는 object 이다.
+        console.log(typeof x2, typeof name, typeof isAdult, typeof person2, typeof arr1);
+    </script>
+</body>
+</html>

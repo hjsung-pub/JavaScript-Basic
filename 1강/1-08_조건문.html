@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //조건문 - if, switch
+
+        //if(조건문){수행코드} >> 위에서부터 조건식 비교하여 해당 조건일 때 출력
+        var age = 19;
+        if(age > 18){
+            console.log("당신은 성인입니다.");
+        }
+
+        //if else
+        var age = 17;
+        if(age > 18){
+            console.log("당신은 성인입니다.");
+        }else{
+            console.log("당신은 성인이 아닙니다.");
+        }
+
+        var hour = 19;
+        if(hour < 10){
+            console.log("Good Morning");
+        }else if(hour < 18){
+            console.log("Good Morning");
+        }else if(hour < 21){
+            console.log("Good Evening");
+        }else{
+            console.log("Good Night");
+        }
+
+        //switch - 비교연산자는 사용할 수 없으며 위에서부터 조건식을 비교하는게 아닌 바로 해당 case문 실행
+        var d = new Date();
+        var day = d.getDay(); // 일 - 0, 월 - 1, ...
+        var dayName = "";
+
+        switch (day) { //key는 상수만 들어올 수 있다.
+            case 0:
+                dayName = "오늘은 일요일입니다."
+                break;
+            case 1:
+                dayName = "오늘은 월요일입니다."
+                break;
+            case 2:
+                 dayName = "오늘은 화요일입니다."
+                break;
+            case 3:
+                dayName = "오늘은 수요일입니다."
+                break;
+            case 4:
+                 dayName = "오늘은 몫요일입니다."
+                break;
+            case 5:
+                dayName = "오늘은 토요일입니다."
+                break;
+            case 6:
+                dayName = "오늘은 일요일입니다."
+                break;
+            default:
+                dayName = ""
+                break;
+        }
+        console.log(dayName);
+
+    </script>
+</body>
+</html>
