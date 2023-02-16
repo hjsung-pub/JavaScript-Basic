@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //반복문 - 조건이 만족하는 동안에는 계속해서 {} 블록안 코드를 실행
+
+        //for(조건){실행코드}
+        for(var i = 0; i < 5; i++){ //끝과 시작점을 정할 수 있다.
+            if( i == 3){
+                //break; //반복문을 빠져나감
+                continue; //해당 조건의 명령문을 실행하지 않고 그 다음 명령문 실행
+            }
+            console.log(`The Number is ${i}`);
+        }
+
+        var i = 1;
+        var leng = 10;
+        var total = 0;
+        for(; i <= leng ; ){ //실무에서는 잘 사용하지 않지만, 이런식으로 생략하여 사용할 수 있다.
+            total += i;
+            i++;
+        }
+        console.log(total);
+
+        var numbers = [43, 12, 5, 7];
+        var leng = numbers.length;
+
+        for(var i = 0; i < leng; i++){
+            console.log(numbers[i]);
+        }
+
+        /*===================================================*/
+
+        //for-in
+        for(var i in numbers){ //Array, index값을 가져옴
+            console.log(numbers[i]);
+        }
+
+        var person = {
+            firstName : "Heejun",
+            lastName : "Sung",
+            age : 31
+        };
+
+        person.firstName;
+        person["firstName"]; //key는 문자열
+
+        for(var key in person){ //object, key는 문자열
+            console.log(person[key]);
+        }
+
+        /*===================================================*/
+        
+        //forEach
+        // array.forEach(element => {
+            
+        // });
+        numbers.forEach(function(i){
+            console.log(i);
+        });
+
+        /*===================================================*/
+
+        //for-of
+        for(var num of numbers){ //index값이 아닌 실제 값을 가져옴
+            console.log(num);
+        }
+
+        /*===================================================*/
+
+        //while(조건){실행코드} >> 조건을 먼저 체크
+        var i = 1;
+        var total = 0;
+        while (i <= 10) {
+            total += i;
+            i++
+        };
+        console.log(total);
+
+        var i = 11;
+        total = 0;
+        do {
+            total += i;
+            i++;
+        } while (i <= 10);
+        console.log(total);
+
+        /*===================================================*/
+
+    </script>
+</body>
+</html>
